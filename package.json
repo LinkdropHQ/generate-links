@@ -12,10 +12,7 @@
     "@linkdrop/sdk": "^1.1.2",
     "ethers": "^4.0.41",
     "fast-csv": "^4.0.1",
-    "inquirer": "^7.0.1",
-    "kleur": "^3.0.3",
     "ora": "^4.0.3",
-    "prompts": "^2.3.0",
     "terminal-kit": "^1.32.2"
   }
 }
