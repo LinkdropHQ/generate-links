@@ -44,8 +44,7 @@ const config = require('./config')
         wallet: config.DEFAULT_WALLET
       })
 
-      const link = { i, linkId, linkKey, linkdropSignerSignature, url }
-      links.push(link)
+      links.push({ url })
     }
 
     // Save links
@@ -57,7 +56,7 @@ const config = require('./config')
         fs.mkdirSync(dir)
       }
       const ws = fs.createWriteStream(filename)
-      fastcsv.write(links, { headers: true }).pipe(ws)
+      fastcsv.write(links).pipe(ws)
     } catch (err) {
       throw new Error(err)
     }
