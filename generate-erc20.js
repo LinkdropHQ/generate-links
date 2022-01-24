@@ -18,9 +18,11 @@ const config = require('./config')
 
     const linkdropSDK = new LinkdropSDK({
       linkdropMasterAddress: config.LINKDROP_MASTER_ADDRESS,
-      factoryAddress:
-        config.FACTORY_ADDRESS || '0xBa051891B752ecE3670671812486fe8dd34CC1c8',
-      chain: config.CHAIN || 'mainnet'
+      factoryAddress: config.FACTORY_ADDRESS || '0xBa051891B752ecE3670671812486fe8dd34CC1c8',
+      chain: config.CHAIN || 'mainnet',
+      claimHost: config.CLAIM_HOST,
+      jsonRpcUrl: config.JSON_RPC_URL,
+      apiHost: config.API_HOST
     })
 
     const proxyAddress = linkdropSDK.getProxyAddress(config.CAMPAIGN_ID)
@@ -30,10 +32,7 @@ const config = require('./config')
 
     for (let i = 0; i < config.LINKS_NUMBER; i++) {
       const {
-        url,
-        linkId,
-        linkKey,
-        linkdropSignerSignature
+        url
       } = await linkdropSDK.generateLink({
         signingKeyOrWallet: config.SIGNING_KEY,
         weiAmount: config.WEI_AMOUNT || 0,
