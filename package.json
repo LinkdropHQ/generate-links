@@ -15,7 +15,7 @@
     "@babel/runtime": "^7.7.7",
     "@linkdrop/sdk": "^1.2.0",
     "ethers": "^4.0.41",
-    "fast-csv": "^4.0.1",
+    "fast-csv": "^4.3.6",
     "ora": "^4.0.3",
     "terminal-kit": "^1.32.2"
   },
