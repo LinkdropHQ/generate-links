@@ -17,7 +17,7 @@
     "ethers": "^4.0.41",
     "fast-csv": "^4.0.1",
     "ora": "^4.0.3",
-    "terminal-kit": "^1.32.2"
+    "terminal-kit": "^2.1.8"
   },
   "engines": {
     "node": ">=10.0"
